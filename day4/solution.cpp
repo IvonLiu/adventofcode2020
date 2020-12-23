@@ -16,15 +16,67 @@ unordered_map<string, int> key_shift ({
 	{"pid", 1<<6}
 });
 
+bool fieldExists(string &field, string &key, string &val) {
+	int idx = field.find(':');
+	key = field.substr(0, idx);
+	val = field.substr(idx + 1);
+	return key_shift.find(key) != key_shift.end();
+}
+
+bool validateField(string &field, string &key, string &val) {
+	if (fieldExists(field, key, val)) {
+		try {
+			if (key == "byr") {
+				int num = stoi(val);
+				return 1920 <= num && num <= 2002;
+			} else if (key == "iyr") {
+				int num = stoi(val);
+				return 2010 <= num && num <= 2020;
+			} else if (key == "eyr") {
+				int num = stoi(val);
+				return 2020 <= num && num <= 2030;
+			} else if (key == "hgt") {
+				int num = stoi(val.substr(0, val.length() - 2));
+				string unit = val.substr(val.length() - 2);
+				if (unit == "cm") {
+					return 150 <= num && num <= 193;
+				} else if (unit == "in") {
+					return 59 <= num && num <= 76;
+				} else {
+					return false;
+				}
+			} else if (key == "hcl") {
+				int num = stoi(val.substr(1), nullptr, 16);
+				return val[0] == '#' && val.length() == 7;
+			} else if (key == "ecl") {
+				return val == "amb"
+					|| val == "blu"
+					|| val == "brn"
+					|| val == "gry"
+					|| val == "grn"
+					|| val == "hzl"
+					|| val == "oth";
+			} else if (key == "pid") {
+				int num = stoi(val);
+				return 0 <= num && num <= 999999999 && val.length() == 9;
+			}
+		} catch (invalid_argument &ia) {
+			return false;
+		} catch (out_of_range &oor) {
+			return false;
+		}
+	}
+	return false;
+}
+
 bool validatePassport(vector<string> &fields) {
 	int sum = 0;
 	for (auto it = fields.begin(); it != fields.end(); it++) {
-		int idx = it->find(':');
-		string key = it->substr(0, idx);
-		cout << key << " ";
-		if (key_shift.find(key) != key_shift.end()) {
+		string key, val;
+		if (validateField(*it, key, val)) {
 			sum |= key_shift[key];
 		}
+		cout << key << " ";
 	}
 	bitset<8> b(sum);
 	cout << b << endl;
