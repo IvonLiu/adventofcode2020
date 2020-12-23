@@ -8,6 +8,8 @@ int main() {
 	string line;
 	ifstream input ("input.txt");
 	int maxId = 0;
+	int minId = INT_MAX;
+	int x = 0;
 
 	if (input.is_open()) {
 		while (getline(input, line)) {
@@ -27,9 +29,18 @@ int main() {
 			if (id > maxId) {
 				maxId = id;
 			}
+			if (id < minId) {
+				minId = id;
+			}
+			x = x ^ id;
 		}
 		input.close();
 	}
 
+	for (int i=minId; i<=maxId; i++) {
+		x = x ^ i;
+	}
+
 	cout << maxId << endl;
+	cout << x << endl;
 }
