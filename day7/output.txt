@@ -1,0 +1,130 @@
+plaid tan -> posh turquoise -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+mirrored beige -> clear crimson -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+dim beige -> pale silver -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+faded white -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+light bronze -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+clear purple -> drab cyan -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+drab indigo -> shiny bronze -> striped indigo -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+pale silver -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+drab cyan -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+faded magenta -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+dull red -> dotted magenta -> shiny red -> posh violet -> dark green -> vibrant beige -> shiny gold
+clear bronze -> shiny tan -> dotted turquoise -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+mirrored coral -> light magenta -> clear lavender -> wavy salmon -> drab teal -> shiny gold
+shiny bronze -> striped indigo -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+drab yellow -> clear chartreuse -> dark crimson -> dim coral -> clear indigo -> shiny gold
+posh crimson -> dim bronze -> striped brown -> wavy salmon -> drab teal -> shiny gold
+dotted chartreuse -> muted bronze -> shiny red -> posh violet -> dark green -> vibrant beige -> shiny gold
+faded fuchsia -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+striped indigo -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+clear olive -> pale fuchsia -> dull yellow -> clear maroon -> clear indigo -> shiny gold
+muted bronze -> shiny red -> posh violet -> dark green -> vibrant beige -> shiny gold
+wavy teal -> dull cyan -> mirrored green -> dark green -> vibrant beige -> shiny gold
+striped green -> striped tomato -> light beige -> muted lime -> vibrant beige -> shiny gold
+pale coral -> dotted turquoise -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+drab plum -> bright olive -> faded coral -> drab teal -> shiny gold
+muted cyan -> muted gray -> plaid teal -> muted black -> vibrant beige -> shiny gold
+light plum -> faded olive -> wavy salmon -> drab teal -> shiny gold
+muted crimson -> striped brown -> wavy salmon -> drab teal -> shiny gold
+light silver -> wavy salmon -> drab teal -> shiny gold
+drab white -> dim magenta -> pale bronze -> dotted lime -> shiny gold
+clear chartreuse -> dark crimson -> dim coral -> clear indigo -> shiny gold
+faded gray -> striped brown -> wavy salmon -> drab teal -> shiny gold
+pale fuchsia -> dull yellow -> clear maroon -> clear indigo -> shiny gold
+light cyan -> dull yellow -> clear maroon -> clear indigo -> shiny gold
+wavy indigo -> clear cyan -> faded coral -> drab teal -> shiny gold
+drab beige -> posh violet -> dark green -> vibrant beige -> shiny gold
+mirrored violet -> posh violet -> dark green -> vibrant beige -> shiny gold
+dotted magenta -> shiny red -> posh violet -> dark green -> vibrant beige -> shiny gold
+light fuchsia -> faded coral -> drab teal -> shiny gold
+plaid aqua -> mirrored green -> dark green -> vibrant beige -> shiny gold
+vibrant tomato -> striped brown -> wavy salmon -> drab teal -> shiny gold
+dim tan -> drab teal -> shiny gold
+clear lavender -> wavy salmon -> drab teal -> shiny gold
+muted green -> mirrored green -> dark green -> vibrant beige -> shiny gold
+dull orange -> clear lavender -> wavy salmon -> drab teal -> shiny gold
+bright indigo -> mirrored purple -> vibrant yellow -> striped purple -> vibrant beige -> shiny gold
+faded cyan -> striped purple -> vibrant beige -> shiny gold
+vibrant gray -> striped tomato -> light beige -> muted lime -> vibrant beige -> shiny gold
+plaid olive -> dull yellow -> clear maroon -> clear indigo -> shiny gold
+shiny teal -> mirrored tomato -> dark green -> vibrant beige -> shiny gold
+pale black -> plaid teal -> muted black -> vibrant beige -> shiny gold
+light white -> plaid teal -> muted black -> vibrant beige -> shiny gold
+striped tomato -> light beige -> muted lime -> vibrant beige -> shiny gold
+clear fuchsia -> posh olive -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+posh indigo -> shiny salmon -> muted lime -> vibrant beige -> shiny gold
+mirrored purple -> vibrant yellow -> striped purple -> vibrant beige -> shiny gold
+posh orange -> light silver -> wavy salmon -> drab teal -> shiny gold
+dotted turquoise -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+bright crimson -> clear cyan -> faded coral -> drab teal -> shiny gold
+posh white -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+faded brown -> faded coral -> drab teal -> shiny gold
+plaid yellow -> faded brown -> faded coral -> drab teal -> shiny gold
+clear cyan -> faded coral -> drab teal -> shiny gold
+striped aqua -> mirrored purple -> vibrant yellow -> striped purple -> vibrant beige -> shiny gold
+dim magenta -> pale bronze -> dotted lime -> shiny gold
+drab purple -> muted green -> mirrored green -> dark green -> vibrant beige -> shiny gold
+clear indigo -> shiny gold
+light crimson -> muted white -> vibrant beige -> shiny gold
+wavy orange -> dull tomato -> clear indigo -> shiny gold
+dull yellow -> clear maroon -> clear indigo -> shiny gold
+muted black -> vibrant beige -> shiny gold
+dark crimson -> dim coral -> clear indigo -> shiny gold
+muted magenta -> faded olive -> wavy salmon -> drab teal -> shiny gold
+wavy salmon -> drab teal -> shiny gold
+drab tan -> clear maroon -> clear indigo -> shiny gold
+posh violet -> dark green -> vibrant beige -> shiny gold
+drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+mirrored green -> dark green -> vibrant beige -> shiny gold
+bright black -> muted crimson -> striped brown -> wavy salmon -> drab teal -> shiny gold
+pale yellow -> wavy salmon -> drab teal -> shiny gold
+mirrored tomato -> dark green -> vibrant beige -> shiny gold
+faded coral -> drab teal -> shiny gold
+posh teal -> striped purple -> vibrant beige -> shiny gold
+plaid teal -> muted black -> vibrant beige -> shiny gold
+drab crimson -> muted black -> vibrant beige -> shiny gold
+muted lime -> vibrant beige -> shiny gold
+posh olive -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+dim salmon -> faded olive -> wavy salmon -> drab teal -> shiny gold
+clear crimson -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+light beige -> muted lime -> vibrant beige -> shiny gold
+vibrant yellow -> striped purple -> vibrant beige -> shiny gold
+muted gray -> plaid teal -> muted black -> vibrant beige -> shiny gold
+shiny salmon -> muted lime -> vibrant beige -> shiny gold
+shiny red -> posh violet -> dark green -> vibrant beige -> shiny gold
+dotted indigo -> muted lime -> vibrant beige -> shiny gold
+light magenta -> clear lavender -> wavy salmon -> drab teal -> shiny gold
+bright salmon -> bright crimson -> clear cyan -> faded coral -> drab teal -> shiny gold
+dull tomato -> clear indigo -> shiny gold
+dull cyan -> mirrored green -> dark green -> vibrant beige -> shiny gold
+dull bronze -> faded coral -> drab teal -> shiny gold
+posh turquoise -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+clear maroon -> clear indigo -> shiny gold
+drab coral -> faded white -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+striped brown -> wavy salmon -> drab teal -> shiny gold
+muted maroon -> plaid chartreuse -> vibrant beige -> shiny gold
+plaid brown -> faded white -> dotted black -> drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+posh purple -> wavy salmon -> drab teal -> shiny gold
+shiny tan -> dotted turquoise -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+pale bronze -> dotted lime -> shiny gold
+light chartreuse -> clear indigo -> shiny gold
+dark yellow -> clear olive -> pale fuchsia -> dull yellow -> clear maroon -> clear indigo -> shiny gold
+drab olive -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+dotted silver -> dark magenta -> plaid chartreuse -> vibrant beige -> shiny gold
+muted white -> vibrant beige -> shiny gold
+plaid chartreuse -> vibrant beige -> shiny gold
+vibrant beige -> shiny gold
+posh fuchsia -> drab brown -> wavy orange -> dull tomato -> clear indigo -> shiny gold
+dark green -> vibrant beige -> shiny gold
+dim coral -> clear indigo -> shiny gold
+dotted lime -> shiny gold
+dim bronze -> striped brown -> wavy salmon -> drab teal -> shiny gold
+faded olive -> wavy salmon -> drab teal -> shiny gold
+drab teal -> shiny gold
+faded red -> dotted lime -> shiny gold
+striped purple -> vibrant beige -> shiny gold
+bright olive -> faded coral -> drab teal -> shiny gold
+shiny gold
+129
