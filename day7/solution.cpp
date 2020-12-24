@@ -23,6 +23,44 @@ Bag* getBag(unordered_map<string, Bag*> &map, string &name) {
 	return map[name];
 }
 
+int getNumParents(Bag* start, bool verbose = false) {
+	unordered_set<Bag*> visited;
+	queue<Bag*> q;
+	q.push(start);
+
+	while (!q.empty()) {
+		Bag* curr = q.front();
+		q.pop();
+		visited.insert(curr);
+
+		for (auto &p : curr->parents) {
+			if (visited.find(p) == visited.end()) {
+				p->children.clear();
+				p->children.push_back(curr);
+				q.push(p);
+			}
+		}
+	}
+
+	if (verbose) {
+		for (auto &bag : visited) {
+			Bag* curr = bag;
+			if (curr == start) continue;
+			while (!curr->children.empty() && curr != start) {
+				cout << curr->name << " -> ";
+				curr = curr->children[0];
+			}
+			cout << curr->name << endl;
+		}
+	}
+
+	return visited.size() - 1;
+}
+
+int getNumChildren(Bag* start) {
+	return 0;
+}
+
 int main() {
 
 	string line;
@@ -58,48 +96,17 @@ int main() {
 		input.close();
 	}
 
-	unordered_set<Bag*> visited;
-	queue<Bag*> q;
 	Bag* start = map["shiny gold"];
-	q.push(start);
+	int numParents = getNumParents(start);
+	int numChildren = getNumChildren(start);
 
-	while (!q.empty()) {
-		Bag* curr = q.front();
-		q.pop();
-		visited.insert(curr);
-
-		for (auto &p : curr->parents) {
-			if (visited.find(p) == visited.end()) {
-				p->children.clear();
-				p->children.push_back(curr);
-				q.push(p);
-			}
-		}
-	}
-
-	// for (auto &bag : visited) {
-	// 	cout << bag->name << ": ";
-	// 	for (auto &child : bag->children) {
-	// 		cout << child->name << ", ";
-	// 	}
-	// 	cout << endl;
-	// }
-
-	for (auto &start : visited) {
-		Bag* bag = start;
-		if (bag->name == "shiny gold") continue;
-		while (!bag->children.empty() && bag->name != "shiny gold") {
-			cout << bag->name << " -> ";
-			bag = bag->children[0];
-		}
-		cout << bag->name << endl;
-	}
-
-	cout << visited.size() - 1 << endl; // -1 because shiny gold by itself doesn't count
+	cout << numParents << endl; // -1 because shiny gold by itself doesn't count
 
 	// memory cleanup
 	for (auto &pair : map) {
 		delete pair.second;
 	}
+
+	return 0;
 }
 
