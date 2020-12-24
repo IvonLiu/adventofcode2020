@@ -13,7 +13,7 @@ class Bag {
 		Bag (string name) : name(name) { }
 		string name;
 		vector<Bag*> parents;
-		vector<Bag*> children;
+		vector<pair<Bag*, int>> children;
 };
 
 Bag* getBag(unordered_map<string, Bag*> &map, string &name) {
@@ -36,7 +36,7 @@ int getNumParents(Bag* start, bool verbose = false) {
 		for (auto &p : curr->parents) {
 			if (visited.find(p) == visited.end()) {
 				p->children.clear();
-				p->children.push_back(curr);
+				p->children.push_back(pair<Bag*, int>(curr, 0));
 				q.push(p);
 			}
 		}
@@ -48,13 +48,13 @@ int getNumParents(Bag* start, bool verbose = false) {
 			if (curr == start) continue;
 			while (!curr->children.empty() && curr != start) {
 				cout << curr->name << " -> ";
-				curr = curr->children[0];
+				curr = curr->children[0].first;
 			}
 			cout << curr->name << endl;
 		}
 	}
 
-	return visited.size() - 1;
+	return visited.size() - 1; // -1 because starting bag by itself doesn't count
 }
 
 int getNumChildren(Bag* start) {
@@ -72,7 +72,7 @@ int main() {
 			string sep = " bags contain ";
 			int idx = line.find(sep);
 			string name = line.substr(0, idx);
-			//cout << name << " -> ";
+			// cout << name << " -> ";
 			Bag* bag = getBag(map, name);
 
 			if (line.find("no other bags") == string::npos) {
@@ -84,14 +84,28 @@ int main() {
 					int end = token.find(" bag");
 					int len = end - start;
 					string childName = token.substr(start, len);
-					//cout << childName << ", ";
+
+					string countStr = "";
+					int countStart = token.find(" ") + 1;
+					if (countStart == start) {
+						countStr = token.substr(0, countStart - 1);
+					} else {
+						int countLen = start - countStart - 1;
+						countStr = token.substr(countStart, countLen);
+					}
+					int childCount = 0;
+					try {
+						childCount = stoi(countStr);
+					} catch (invalid_argument &ia) {}
 
 					Bag* childBag = getBag(map, childName);
-					bag->children.push_back(childBag);
+					bag->children.push_back(pair<Bag*, int>(childBag, childCount));
 					childBag->parents.push_back(bag);
+
+					// cout << childCount << " " << childName << ", ";
 				}
 			}
-			//cout << endl;
+			// cout << endl;
 		}
 		input.close();
 	}
@@ -100,7 +114,7 @@ int main() {
 	int numParents = getNumParents(start);
 	int numChildren = getNumChildren(start);
 
-	cout << numParents << endl; // -1 because shiny gold by itself doesn't count
+	cout << numParents << endl;
 
 	// memory cleanup
 	for (auto &pair : map) {
