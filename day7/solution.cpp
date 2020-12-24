@@ -57,8 +57,18 @@ int getNumParents(Bag* start, bool verbose = false) {
 	return visited.size() - 1; // -1 because starting bag by itself doesn't count
 }
 
-int getNumChildren(Bag* start) {
-	return 0;
+int getNumBags(Bag* bag) {
+	if (!bag) {
+		return 0;
+	}
+
+	int totalBags = 1;
+	for (auto &p : bag->children) {
+		Bag* b = p.first;
+		int count = p.second;
+		totalBags += getNumBags(b) * count;
+	}
+	return totalBags;
 }
 
 int main() {
@@ -111,10 +121,10 @@ int main() {
 	}
 
 	Bag* start = map["shiny gold"];
-	int numParents = getNumParents(start);
-	int numChildren = getNumChildren(start);
+	// int numParents = getNumParents(start);
+	int numBags = getNumBags(start) - 1; // -1 because starting bag doesn't count
 
-	cout << numParents << endl;
+	cout << numBags << endl;
 
 	// memory cleanup
 	for (auto &pair : map) {
@@ -123,4 +133,3 @@ int main() {
 
 	return 0;
 }
-
