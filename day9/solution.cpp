@@ -2,21 +2,23 @@
 #include <fstream>
 #include <string>
 #include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Node {
     public:
-        long val;
+        long long val;
         Node* next;
-        Node (long val) : val(val) {}
+        Node (long long val) : val(val) {}
 };
 
-unordered_map<long, int> map;
+unordered_map<long long, int> map;
 Node* start;
 Node* last;
+vector<long long> values;
 
 
-bool valid(long &val, long &a, long &b) {
+bool valid(long long &val, long long &a, long long &b) {
     Node* node = start;
     while (node) {
         if (map.find(val - node->val) != map.end()) {
@@ -31,16 +33,54 @@ bool valid(long &val, long &a, long &b) {
     return false;
 }
 
+long long findContinuous(long long &invalid) {
+    auto a = values.begin();
+    auto b = values.begin();
+    long long sum = 0;
+
+    while (a != values.end() && b != values.end()) {
+        sum += *b;
+        while (sum > invalid && a != values.end()) {
+            sum -= *a;
+            a++;
+        }
+        if (sum == invalid) {
+            cout << "found" << endl;
+            break;
+        }
+        b++;
+    }
+    cout << endl;
+
+    int min = INT_MAX;
+    int max = INT_MIN;
+    for (auto it = a; it <= b; it++) {
+        cout << *it << " + ";
+        if (*it < min) {
+            min = *it;
+        }
+        if (*it > max) {
+            max = *it;
+        }
+    }
+    cout << endl;
+
+    return min + max;
+}
+
 int main() {
     string line;
     ifstream input ("input.txt");
 
     int count = 0;
     int preamble = 25;
+    long long invalid;
 
     if (input.is_open()) {
         while (getline(input, line)) {
-            long val = stol(line);
+            long long val = stoll(line);
+            values.push_back(val);
+
             if (count < preamble) {
                 Node* node = new Node(val);
                 if (!start) {
@@ -53,9 +93,10 @@ int main() {
 
                 count++;
             } else {
-                long a, b;
+                long long a, b;
                 if (!valid(val, a, b)) {
                     cout << val << endl;
+                    invalid = val;
                     break;
                 } else {
                     cout << val << " = " << a << " + " << b << endl;
@@ -85,6 +126,9 @@ int main() {
         }
         input.close();
     }
+
+    long long continuous = findContinuous(invalid);
+    cout << continuous << endl;
 
     while (start) {
         Node* next = start->next;
