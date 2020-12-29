@@ -23,6 +23,37 @@ int countOccupiedNeighbors(vector<vector<char>> &seats, int i, int j) {
 	return neighbors;
 }
 
+int countOccupiedVisibleNeighbors(vector<vector<char>> &seats, int i, int j) {
+	pair<int, int> directions [] {
+		{-1, -1},
+		{-1,  0},
+		{-1,  1},
+		{ 0, -1},
+		{ 0,  1},
+		{ 1, -1},
+		{ 1,  0},
+		{ 1,  1}
+	};
+
+	int neighbors = 0;
+	for (auto &dir : directions) {
+		int row = i + dir.first;
+		int col = j + dir.second;
+		while (0 <= row && row < seats.size() && 0 <= col && col < seats[row].size()) {
+			if (seats[row][col] <= '#') {
+				neighbors++;
+				break;
+			} else if (seats[row][col] > '.') {
+				break;
+			}
+			row += dir.first;
+			col += dir.second;
+		}
+	}
+
+	return neighbors;
+}
+
 int main() {
 
 	string line;
@@ -45,7 +76,7 @@ int main() {
 			for (int j=0; j<seats[i].size(); j++) {
 				// cout << seats[i][j];
 				if (seats[i][j] == '.') continue;
-				int neighbors = countOccupiedNeighbors(seats, i, j);
+				int neighbors = countOccupiedVisibleNeighbors(seats, i, j);
 				seats[i][j] -= neighbors;
 			}
 			// cout << endl;
@@ -59,7 +90,7 @@ int main() {
 				}
 				if (seats[i][j] < '.') { // #
 					count++;
-					if ('#' - seats[i][j] >= 4) {
+					if ('#' - seats[i][j] >= 5) {
 						newEmpty++;
 						seats[i][j] = 'L';
 					} else {
