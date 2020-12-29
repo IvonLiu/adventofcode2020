@@ -3,21 +3,24 @@
 #include <string>
 using namespace std;
 
+void rotate(int &dx, int &dy, int val) {
+	val = (val + 360) % 360;
+	int c = (val % 180 == 0 ? 1 : 0) * (val % 360 == 0 ? 1 : -1);
+	int s = (val % 180 == 0 ? 0 : 1) * (val % 270 == 0 ? -1 : 1);
+	int new_dx = c * dx - s * dy;
+	dy = s * dx + c * dy;
+	dx = new_dx;
+}
+
 int main() {
 	
 	string line;
 	ifstream input ("input.txt");
 
-	pair<int, int> DIRS [] {
-		{ 1,  0},
-		{ 0, -1},
-		{-1,  0},
-		{ 0,  1}
-	};
-
 	int x = 0;
 	int y = 0;
-	int dir = 0;
+	int dx = 10;
+	int dy = 1;
 
 	if (input.is_open()) {
 		while (getline(input, line)) {
@@ -26,31 +29,29 @@ int main() {
 			cout << c << val << ": ";
 			switch (c) {
 				case 'N':
-					y += val;
+					dy += val;
 					break;
 				case 'S':
-					y -= val;
+					dy -= val;
 					break;
 				case 'E':
-					x += val;
+					dx += val;
 					break;
 				case 'W':
-					x -= val;
+					dx -= val;
 					break;
 				case 'L':
-					val /= 90;
-					dir = (((dir - val) % 4) + 4) % 4;
+					rotate(dx, dy, val);
 					break;
 				case 'R':
-					val /= 90;
-					dir = (dir + val) % 4;
+					rotate(dx, dy, -val);
 					break;
 				case 'F':
-					x += DIRS[dir].first * val;
-					y += DIRS[dir].second * val;
+					x += dx * val;
+					y += dy * val;
 					break;
 			}
-			cout << x << ", " << y << ", " << dir << endl;
+			cout << x << ", " << y << ", " << dx << ", " << dy << endl;
 		}
 		input.close();
 	}
